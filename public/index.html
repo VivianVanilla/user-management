@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>User Management</title>
+  <link rel="stylesheet" href="styles.css" />
+  <script defer src="main.js"></script>
+</head>
+<body>
+  <h1>Welcome to User Management Simulator!</h1>
+
+    <div> 
+
+             
+        <form id="form"> 
+        <button id="edit-button">Edit</button>
+        <button id="delete-button">Delete User</button>
+        <button id="addUserButton">Add User</button>
+
+        <input id="search" type="search" placeholder="Search users..." /> 
+        <button type="submit">Search</button>
+        <select id="filter">
+            <option value="desc">Alphabetical Descending</option>
+            <option value="asc">Alphabetical Ascending</option>
+        </select>
+        <div id="searchby"> <h2> Search by </h2> 
+            <input type="radio" name="sortBy" value="firstName" checked>First Name</input>
+            <input type="radio" name="sortBy" value="lastName">Last Name</input> </div>
+    </form>
+
+    </div>
+
+    
+    <div id="displayArea"> 
+        <ul id="userList">
+
+            <template id="user-template">
+  <div class="user-card">
+    <h3 data-name></h3> <h3 data-lastname></h3>
+    <p> ID: <span data-id></span> </p>
+    <p data-email></p>
+    <p>Age: <span data-age></span></p>
+  </div>
+</template>
+
+<div id="users-container"></div>
+            
+        </ul>    
+
+</div>   
+
+
+
+</body>
+</html>
